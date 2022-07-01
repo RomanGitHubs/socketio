@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Whats app?!?</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="header">
+        <h1>Whats app?!?</h1>
+        <a href="index.html" class="header__btn">Выйти</a>
+      </header>
+
+      <div class="chat-main ">
+        <div class="chat-sidebar">
+          <h2 id="room-name"></h2>
+            
+          </h2>
+          <h3>Участники:</h3>
+          <div id="users"></div>
+        </div>
+
+        <div class="chat-messages"></div>
+      </div>
+      
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input 
+            type="file" 
+            id="file"
+            class="input-file" 
+          />
+          <input
+            class="input-text"
+            id="msg"
+            type="text"
+            placeholder="Введите сообщение"
+            autocomplete="off"
+          />
+          <button class="btn-send">Отправить</button>
+        </form>
+      </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.5/qs.min.js" 
+      integrity="sha512-JduLFfiB5t9F2dYayaCCWObe/SeciiMhX2MHAKGvQ22crUA/Sb1l4elG5A7r7Bu1tP2rs1cU5lR1Irx/govVdg==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

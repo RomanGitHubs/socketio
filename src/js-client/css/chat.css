@@ -1,0 +1,189 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: #f4f5ff;
+	margin: 0;
+	padding: 0 20px;
+	min-width: 420px;
+
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 1100px;
+	background: #fff;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.header {
+	background: #128c7e;
+	color: #fff;
+	padding: 10px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__btn {
+	cursor: pointer;
+	padding: 8px 20px;
+	background: #e6e9ff;
+	color: #128c7e;
+	border: 0;
+	font-size: 17px;
+	border: none;
+	border-radius: 10px; 
+	text-decoration: none;
+}
+
+.chat-main {
+	display: flex;
+}
+
+.chat-sidebar {
+	background: #fff;
+	color: rgb(0, 0, 0);
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+	max-height: 500px;
+	width: 300px;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+	display: none;
+}
+
+.chat-sidebar h3 {
+margin: 0;
+font-weight: 500;
+
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+
+ul {
+	list-style: none;
+}
+
+.chat-messages {
+	padding: 30px;
+	height: 500px;
+	overflow-y: scroll;
+	width: 100%;
+
+}
+
+.message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: #f4f5ff;
+	border-radius: 5px;
+}
+
+.meta {
+	font-size: 15px;
+	font-weight: 500;
+	color: #128c7e;
+	opacity: 0.7;
+	margin-bottom: 7px;
+	margin: 0;
+}
+
+.meta span {
+	color: #777;
+}
+
+.image {
+	max-width: 100px;
+}
+
+.list__one-user {
+	display: flex;
+	margin-top: 20px;
+}
+
+.list__one-user__name{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	margin-left: 5px;
+	justify-content: center
+;}
+
+.avatar-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: #128c7e;
+}
+
+.chat-form-container form {
+	display: flex;
+	position: relative;
+
+
+}
+
+.input-text {
+	font-size: 16px;
+	padding: 5px 5px 5px 60px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	flex: 1;
+	outline: none;
+}
+
+.input-file {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	background-image: url('../../assets/skrepka.png');
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+	padding: 30px 0 0 0; 
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+
+.btn-send {
+	cursor: pointer;
+	padding: 8px 20px;
+	background: #e6e9ff;
+	color: #128c7e;
+	border: 0;
+	font-size: 17px;
+	border: none;
+	border-radius: 10px; 
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+
+	.chat-messages {
+		width: auto;
+	}
+}
