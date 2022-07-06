@@ -4,8 +4,8 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const socket = require('socket.io');
-const formatMessage = require('./src/js-client/utils/messages');
-const { addUser, getUser, exitUser, getRoomUsers } = require('./src/js-client/utils/users');
+const formatMessage = require('./src/utils/messages');
+const { addUser, getUser, exitUser, getRoomUsers } = require('./src/utils/users');
 
 const PORT = 2000;
 
@@ -14,9 +14,15 @@ const server = http.createServer(app);
 const io = socket(server);
 
 app.use(express.static(path.join(__dirname, 'src')))
-app.use(express.static(path.join(__dirname, 'src/js-client/')))
+app.use(express.static(path.join(__dirname, "..", "build"))); 
+
+// app.use(express.static(path.join(__dirname, 'src/js-client/')))
 // app.use(express.static(path.join(__dirname, 'src/react-client/public/')))
 // app.use(express.static('http://localhost:3001/'));
+
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+  });
 
 const botName = 'Server'
 
